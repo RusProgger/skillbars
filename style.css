@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    background-color: #111;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Animation skill */
+
+@keyframes animSkill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+/* Skill container */
+
+
+.skills {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.skill-name {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: #f1f2f3;
+}
+
+.skill-bar {
+    height: 5px;
+    background-color: #282828;
+    border-radius: 3px;
+}
+
+.skill-per {
+    height: 5px;
+    background-color: #1fad56;
+    border-radius: 3px;
+    position: relative;
+
+    animation: animSkill 0.7s 1 linear;
+}
+
+.skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 10px;
+
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    font-size: 13px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #f1f1f1;
+    transform: translateX(50%) rotate(-45deg);
+}
+
+/* skill width */
+
+.skill-html {
+    max-width: 85%;
+}
+
+.skill-css {
+    max-width: 75%;
+}
+
+
+.skill-js {
+    max-width: 60%;
+}
+
+.skill-python {
+    max-width: 45%;
+}
+
+
+
+
